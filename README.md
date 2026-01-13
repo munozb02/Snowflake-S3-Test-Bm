@@ -19,41 +19,30 @@ This project demonstrates how to build a secure and fully functional data ingest
 
 ⦁	Loading the data using COPY INTO
 
-##**🏗️ Architecture**
+**🏗️ Architecture**
 
-┌──────────────────────┐
-│      GitHub Repo      │
-│  (SQL + Documentation)│
-└───────────┬──────────┘
-│
-▼
-┌──────────────────────┐
-│ Amazon S3 Bucket      │
-│ snowflake-test-bm02   │
-│  └── data_samples/    │
-│       └── house-price.csv
-└───────────┬──────────┘
-│  (Secure IAM Role)
-▼
-┌──────────────────────┐
-│  Snowflake Storage    │
-│     Integration       │
-└───────────┬──────────┘
-│
-▼
-┌──────────────────────┐
-│  Snowflake External   │
-│        Stage          │
-└───────────┬──────────┘
-│
-▼
-┌──────────────────────┐
-│  Snowflake Table      │
-│   TEST_DB.house_price │
-└──────────────────────┘
+S3 Bucket (data_samples/) 
 
+│ 
 
-##📊** Dataset Description**
+▼ 
+
+Snowflake Storage Integration 
+
+│ 
+
+▼ 
+
+Snowflake External Stage 
+
+│ 
+
+▼ 
+
+Snowflake Table (house_price)
+
+**📊 Dataset Description**
+
 The dataset contains housing attributes such as:
 
 ⦁	Price
